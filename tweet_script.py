@@ -1,14 +1,13 @@
 import tweepy
+from decouple import config
 
 # Authenticate to Twitter
-CONSUMER_KEY = "adG5l4IPcUWD4BY80s1sJDmvt"
-CONSUMER_SECRET = "FNEYeWi8pELaYFIQYliBGYDDguulsnmMeXUfhire6K4HpEMZ8S"
-ACCESS_TOKEN = "986064704824070145-albpFWqIv4Y8mzFIJ9jymTJnNQhvXVL"
-ACCESS_TOKEN_SECRET = "liWVJE5Esm6d64hb0BBxfRVVKXDifzqYmiYQsFdengQqG"
-BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAALibegEAAAAA1CmbWfiEBzKMEnN5YFqC%2F066veI%3D5dy40wNAvMuWN1Pk6YVbfH8uGKekrJdFmoW3AAIMPVc6w6w7ra"
+CONSUMER_KEY = config('CONSUMER_KEY')
+CONSUMER_SECRET = config('CONSUMER_SECRET')
+ACCESS_TOKEN = config('ACCESS_TOKEN')
+ACCESS_TOKEN_SECRET = config('ACCESS_TOKEN_SECRET')
+BEARER_TOKEN = config('BEARER_TOKEN')
 
-
-import tweepy
 client = tweepy.Client(bearer_token= BEARER_TOKEN, consumer_key=CONSUMER_KEY,
                        consumer_secret=CONSUMER_SECRET,
                        access_token=ACCESS_TOKEN,
